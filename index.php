@@ -26,17 +26,17 @@ require_once 'includes/header.php';
 
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon">🔥</div>
+                <img src="images/four.jpg" alt="Four à bois traditionnel" class="feature-img">
                 <h3>Four à bois</h3>
                 <p>Cuisson traditionnelle à 450°C pour une pâte légère et croustillante.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🍅</div>
+                <img src="images/burrata.jpg" alt="Produits frais italiens" class="feature-img">
                 <h3>Produits frais</h3>
                 <p>Mozzarella di bufala, tomates San Marzano, basilic frais — directement importés d'Italie.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">👨‍🍳</div>
+                <img src="images/chef.jpg" alt="Chef pizzaïolo napolitain" class="feature-img">
                 <h3>Chef napolitain</h3>
                 <p>Notre chef Marco perpétue les recettes familiales depuis trois générations.</p>
             </div>
@@ -52,7 +52,7 @@ require_once 'includes/header.php';
             <a href="menu.php" class="btn btn-primary">Voir la carte complète</a>
         </div>
         <div class="highlight-image">
-            <div class="image-placeholder">🍕</div>
+            <div class="image-placeholder"><img src="images/margherita.jpg" alt="Pizza Margherita au feu de bois"></div>
         </div>
     </div>
 </section>

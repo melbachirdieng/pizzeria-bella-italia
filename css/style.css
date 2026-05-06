@@ -72,7 +72,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
 .hero {
     height: 70vh;
     min-height: 450px;
-    background: linear-gradient(135deg, #c23b22 0%, #8e2716 100%);
+    background: linear-gradient(rgba(30, 10, 5, 0.55), rgba(30, 10, 5, 0.55)),
+                url('../images/hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     color: white;
@@ -125,26 +126,39 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
 .feature-card {
     background: var(--creme);
-    padding: 32px;
+    padding: 0 0 32px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 .feature-card:hover { transform: translateY(-4px); }
+.feature-card .feature-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
 .feature-icon { font-size: 3rem; margin-bottom: 16px; }
-.feature-card h3 { color: var(--rouge); margin-bottom: 12px; }
+.feature-card h3 { color: var(--rouge); margin-bottom: 12px; padding: 0 24px; }
+.feature-card p { padding: 0 24px; }
 
 /* Highlight */
 .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .highlight-text h2 { color: var(--rouge); font-size: 2.2rem; margin-bottom: 20px; }
 .highlight-text p { margin-bottom: 24px; font-size: 1.1rem; color: var(--gris); }
 .image-placeholder {
-    background: linear-gradient(135deg, #c23b22, #8e2716);
     aspect-ratio: 1;
     border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 8rem;
+    overflow: hidden;
     box-shadow: var(--shadow);
+    background: var(--creme);
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* === PAGE HEADER === */
@@ -199,14 +213,19 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
 .gallery-item { text-align: center; }
 .gallery-placeholder {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, #faf6f0, #e8d8c4);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 4rem;
+    background: var(--creme);
     border-radius: 8px;
     box-shadow: var(--shadow);
     transition: transform 0.2s;
+    overflow: hidden;
 }
-.gallery-placeholder:hover { transform: scale(1.05); }
+.gallery-placeholder:hover { transform: scale(1.03); }
+.gallery-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .gallery-item figcaption { margin-top: 12px; color: var(--gris); font-size: 0.9rem; }
 
 /* === CONTACT === */

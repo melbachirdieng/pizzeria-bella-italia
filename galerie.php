@@ -3,15 +3,13 @@ $page = 'galerie';
 require_once 'includes/header.php';
 
 $photos = [
-    ['🍕', 'Margherita au feu de bois'],
-    ['🔥', 'Notre four à bois traditionnel'],
-    ['🍝', 'Tagliatelle bolognese maison'],
-    ['🥗', 'Burrata des Pouilles'],
-    ['🍷', 'Sélection de vins italiens'],
-    ['🏛️', 'Notre salle restaurant'],
-    ['👨‍🍳', 'Marco, notre chef pizzaïolo'],
-    ['🍰', 'Tiramisu maison'],
-    ['🌿', 'Basilic frais du jardin'],
+    ['margherita.jpg', 'Margherita au feu de bois'],
+    ['four.jpg',       'Notre four à bois traditionnel'],
+    ['pates.jpg',      'Pâtes fraîches maison'],
+    ['burrata.jpg',    'Burrata des Pouilles'],
+    ['vins.jpg',       'Sélection de vins italiens'],
+    ['salle.jpg',      'Notre salle restaurant'],
+    ['chef.jpg',       'Marco, notre chef pizzaïolo'],
 ];
 ?>
 
@@ -25,17 +23,15 @@ $photos = [
 <section class="section">
     <div class="container">
         <div class="gallery-grid">
-            <?php foreach ($photos as [$emoji, $legende]): ?>
+            <?php foreach ($photos as [$fichier, $legende]): ?>
                 <figure class="gallery-item">
-                    <div class="gallery-placeholder"><?= $emoji ?></div>
+                    <div class="gallery-placeholder">
+                        <img src="images/<?= htmlspecialchars($fichier) ?>" alt="<?= htmlspecialchars($legende) ?>">
+                    </div>
                     <figcaption><?= htmlspecialchars($legende) ?></figcaption>
                 </figure>
             <?php endforeach; ?>
         </div>
-        <p class="info-box">
-            💡 <strong>À toi de jouer :</strong> remplace ces emojis par les vraies photos du restaurant
-            (dossier <code>/images/</code>) pour finaliser le rendu.
-        </p>
     </div>
 </section>
 
