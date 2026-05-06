@@ -1,0 +1,13 @@
+# IDE
+.vscode/
+.idea/
+
+# Temporaires
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Config sensibles (à créer en prod)
+includes/config.local.php
+.env
