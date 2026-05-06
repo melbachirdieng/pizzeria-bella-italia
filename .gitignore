@@ -10,4 +10,5 @@ Thumbs.db
 
 # Config sensibles (à créer en prod)
 includes/config.local.php
+includes/config_PROD.php
 .env

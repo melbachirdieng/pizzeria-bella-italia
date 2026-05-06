@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <?= date('Y') ?> Pizzeria Bella Italia — Tous droits réservés. Site réalisé par Mouhammad El Bachir Dieng.</p>
+        <p>&copy; <?= date('Y') ?> Pizzeria Bella Italia — Tous droits réservés. Site réalisé par <a href="https://melbachirdieng.github.io/" target="_blank" rel="noopener">Mouhammad El Bachir Dieng</a>.</p>
     </div>
 </footer>
 

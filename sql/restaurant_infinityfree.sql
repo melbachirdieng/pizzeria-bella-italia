@@ -1,17 +1,11 @@
 -- ====================================================================
--- Base de données : pizzeria_bella_italia
--- Site vitrine — Stage Mambo Inchaud (BTS SIO SLAM 2e année)
+-- Base de données : Pizzeria Bella Italia
+-- Version pour deploiement InfinityFree (sans CREATE DATABASE)
+-- A importer directement dans la BDD if0_XXXXXXXX_restaurant
 -- ====================================================================
-
-CREATE DATABASE IF NOT EXISTS pizzeria_bella_italia
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE pizzeria_bella_italia;
 
 -- --------------------------------------------------------
 -- Table : messages_contact
--- Stocke les messages reçus via le formulaire de contact
 -- --------------------------------------------------------
 CREATE TABLE IF NOT EXISTS messages_contact (
     id          INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,7 +20,6 @@ CREATE TABLE IF NOT EXISTS messages_contact (
 
 -- --------------------------------------------------------
 -- Table : utilisateurs
--- Comptes admin (back-office pour consulter les messages)
 -- --------------------------------------------------------
 CREATE TABLE IF NOT EXISTS utilisateurs (
     id              INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,11 +30,8 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
--- Compte admin par défaut
--- Login : admin
--- Mot de passe : admin123
--- (le hash ci-dessous correspond bien à 'admin123' via password_hash)
--- À CHANGER en production !
+-- Compte admin par defaut (admin / admin123)
+-- A changer en production !
 -- --------------------------------------------------------
 INSERT INTO utilisateurs (nom_utilisateur, mot_de_passe, role) VALUES
 ('admin', '$2y$10$zAGJ/3mrcCXvs110I./axe3.f3NShW721q7elQXkLrw6h7uGTPIl6', 'admin');
